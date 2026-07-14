@@ -30,11 +30,16 @@ print(sentence)
 #
 # Type a few string method examples here:
 
+print(name.upper(), name.lower(), sentence.split(" "), sentence.strip())
+
 # What's a case where you might want .lower() or .upper()?
+# When you are cleaning data and want to merge duplicates with different cases.
 
 # What's a case where you might want .strip()?
 
+
 # What's a case where you might want .split()?
+# If you want to isolate parts of a string for data manipulation.
 
 # A list is an ordered collection of values.
 products = ["hoodie", "cap", "mug", "sticker"]
