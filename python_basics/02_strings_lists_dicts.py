@@ -36,7 +36,7 @@ print(name.upper(), name.lower(), sentence.split(" "), sentence.strip())
 # When you are cleaning data and want to merge duplicates with different cases.
 
 # What's a case where you might want .strip()?
-
+# To get rid of characters like spaces, tabs or returns.
 
 # What's a case where you might want .split()?
 # If you want to isolate parts of a string for data manipulation.
@@ -52,7 +52,8 @@ print(products)
 # * products[-1] is the last item
 #
 # Pull a few products here:
-
+print(products[0:3])
+print(products[-2:-1])
 
 # Slicing pulls multiple values.
 # Slicing shape:
@@ -62,12 +63,15 @@ print(products)
 # * list[start:stop:step] can skip values
 #
 # Type a few indexing/slicing examples here:
-
+products[0:4:2]
 # What do you think products[1:3] will return?
+# items 2 and 3.
 
 # What do you think products[:2] will return?
+# the first 2 items.
 
 # What do you think products[::2] will return?
+# every other item starting with the first.
 
 # Lists can change.
 # * .append() adds one item
@@ -76,14 +80,19 @@ print(products)
 # * assigning by index replaces an item
 
 # Try adding one product:
-
+products.append("socks")
 # Try adding several products:
-
+products.extend(("tie", "keychain"))
+products
 # Try combining two lists:
 apparel = ["hoodie", "cap"]
 home = ["mug", "blanket"]
 
+apparel + home
+
 # Try replacing one item in products:
+
+products[-1] = "VOLveralls"
 
 # Beginner object gotcha:
 # Two names can point to the same list object.
@@ -92,11 +101,18 @@ products_b = products_a
 
 # Try appending to products_b, then print both products_a and products_b.
 
+products_b.append("water bottle")
+print(products_a, products_b)
+
+
 # Try again with .copy().
 products_a = ["hoodie", "cap"]
 products_b = products_a.copy()
 
 # Try appending to products_b, then print both products_a and products_b.
+
+products_b.append("water bottle")
+print(products_a, products_b)
 
 # Getting crazy
 a = [["hoodie"], ["cap"]]
