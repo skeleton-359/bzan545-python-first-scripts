@@ -15,7 +15,6 @@
 # * f-strings help build readable strings from variables
 
 # A string is text. Use quotes around string values.
-from numpy import mean
 name = "Adam"
 sentence = "The rain in Spain falls neatly on the plain."
 
@@ -135,7 +134,6 @@ ship_date = "2026-07-14"
 
 # Type an f-string example here:
 print(f"origin: {origin}")
-print(f"destination: ", destination)
 
 
 # A dictionary stores key-value pairs.
