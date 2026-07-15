@@ -15,6 +15,7 @@
 # * f-strings help build readable strings from variables
 
 # A string is text. Use quotes around string values.
+from numpy import mean
 name = "Adam"
 sentence = "The rain in Spain falls neatly on the plain."
 
@@ -133,6 +134,8 @@ destination = "atl"
 ship_date = "2026-07-14"
 
 # Type an f-string example here:
+print(f"origin: {origin}")
+print(f"destination: ", destination)
 
 
 # A dictionary stores key-value pairs.
@@ -149,30 +152,37 @@ student = {
 }
 
 # Type a few dictionary examples here:
-
+Ingredients = {
+    "Flour": 1.5,
+    "Sugar": "3 tbsp",
+    "has_eggs": True,
+}
 # Pull the student's name:
-
+student["name"]
 # Pull the student's grades:
-
+student["grades"]
 # Pull the student's first grade:
-
+student["grades"][0]
 # Pull the student's last grade:
-
+student["grades"][-1]
 # Calculate the student's average grade:
-
+sum(student["grades"]) / 3
 # Explore the dictionary:
 # * .keys()
 # * .values()
 # * .items()
-
+student.keys()
+student.values()
+student.items()
 # Dictionaries can change.
 # * assigning to a new key adds a key-value pair
 # * assigning to an existing key replaces that value
 
 # Try adding a major:
-
+student["major"] = "Music"
 # Try changing the student's age:
-
+student["age"] = 22
+student
 # Do dictionaries have the same two-names-one-object behavior as lists?
 student_a = {
     "name": "Terry",
